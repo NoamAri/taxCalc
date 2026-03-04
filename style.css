@@ -1,0 +1,361 @@
+/* ===========================================
+   Israeli Import Tax Calculator - RTL Hebrew Design
+   Font: Heebo (Google Fonts)
+   Color Palette: Light pastel, easy on the eye
+   =========================================== */
+
+/* --- Google Font Import --- */
+@import url('https://fonts.googleapis.com/css2?family=Heebo:wght@300;400;500;600;700;800&display=swap');
+
+/* --- CSS Custom Properties --- */
+:root {
+    --color-primary: #4A6FA5;
+    --color-primary-light: #6B8FC4;
+    --color-primary-dark: #3A5A8A;
+    --color-accent: #7CA5D6;
+    --color-accent-light: #A8C8F0;
+    --color-bg: #F7F8FA;
+    --color-card: #FFFFFF;
+    --color-card-hover: #FAFBFC;
+    --color-text: #2D3748;
+    --color-text-muted: #718096;
+    --color-text-light: #A0AEC0;
+    --color-border: #E8ECF1;
+    --color-border-light: #F0F2F5;
+    --color-success: #48BB78;
+    --color-success-bg: #F0FFF4;
+    --color-warning: #ED8936;
+    --color-warning-bg: #FFFAF0;
+    --color-exempt: #48BB78;
+    --color-exempt-bg: #E6FFEE;
+    --color-tax: #E87461;
+    --color-tax-bg: #FFF0EE;
+    --color-total-bg: #4A6FA5;
+    --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.04);
+    --shadow-md: 0 2px 8px rgba(0, 0, 0, 0.06);
+    --shadow-lg: 0 4px 16px rgba(0, 0, 0, 0.08);
+    --radius-sm: 8px;
+    --radius-md: 12px;
+    --radius-lg: 16px;
+}
+
+/* --- Global RTL & Font --- */
+html,
+body,
+[data-testid="stAppViewContainer"],
+[data-testid="stApp"] {
+    direction: rtl !important;
+    font-family: 'Heebo', sans-serif !important;
+    background-color: var(--color-bg) !important;
+    color: var(--color-text) !important;
+}
+
+/* --- All text right-aligned --- */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+li,
+span,
+label,
+div {
+    text-align: right !important;
+}
+
+/* --- Streamlit Main Container --- */
+[data-testid="stMainBlockContainer"] {
+    direction: rtl !important;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+
+/* --- Headers --- */
+h1 {
+    font-weight: 700 !important;
+    font-size: 2rem !important;
+    color: var(--color-primary) !important;
+    margin-bottom: 0.2rem !important;
+}
+
+h2 {
+    font-weight: 600 !important;
+    font-size: 1.5rem !important;
+    color: var(--color-primary) !important;
+}
+
+h3 {
+    font-weight: 600 !important;
+    font-size: 1.2rem !important;
+    color: var(--color-primary-light) !important;
+}
+
+/* --- Tab styling --- */
+[data-testid="stTabs"] {
+    direction: rtl !important;
+}
+
+button[data-baseweb="tab"] {
+    font-family: 'Heebo', sans-serif !important;
+    font-size: 1.05rem !important;
+    font-weight: 600 !important;
+    padding: 10px 24px !important;
+    color: var(--color-text-muted) !important;
+}
+
+button[data-baseweb="tab"][aria-selected="true"] {
+    color: var(--color-primary) !important;
+}
+
+/* --- Input fields RTL --- */
+[data-testid="stTextInput"] input,
+[data-testid="stNumberInput"] input {
+    direction: rtl !important;
+    text-align: right !important;
+    font-family: 'Heebo', sans-serif !important;
+    font-size: 1rem !important;
+    border-radius: var(--radius-sm) !important;
+    border: 1px solid var(--color-border) !important;
+    background: var(--color-card) !important;
+}
+
+[data-testid="stNumberInput"] input {
+    direction: ltr !important;
+    text-align: left !important;
+}
+
+/* --- Selectbox RTL --- */
+[data-testid="stSelectbox"] {
+    direction: rtl !important;
+}
+
+[data-testid="stSelectbox"]>div>div {
+    text-align: right !important;
+}
+
+/* --- Labels --- */
+[data-testid="stWidgetLabel"] {
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 500 !important;
+    color: var(--color-text) !important;
+    font-size: 0.95rem !important;
+}
+
+/* --- Buttons --- */
+[data-testid="stButton"] button {
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+    transition: all 0.15s ease !important;
+    border: 1px solid var(--color-border) !important;
+}
+
+[data-testid="stButton"] button:hover {
+    transform: translateY(-1px) !important;
+    box-shadow: var(--shadow-md) !important;
+}
+
+/* --- Dataframe RTL --- */
+[data-testid="stDataFrame"] {
+    direction: rtl !important;
+}
+
+[data-testid="stDataFrame"] th {
+    text-align: right !important;
+    font-weight: 600 !important;
+}
+
+[data-testid="stDataFrame"] td {
+    text-align: right !important;
+}
+
+/* --- Expander --- */
+[data-testid="stExpander"] {
+    direction: rtl !important;
+    border-radius: var(--radius-md) !important;
+    border: 1px solid var(--color-border) !important;
+    background: var(--color-card) !important;
+}
+
+/* --- Alert boxes --- */
+[data-testid="stAlert"] {
+    direction: rtl !important;
+    border-radius: var(--radius-sm) !important;
+    font-family: 'Heebo', sans-serif !important;
+}
+
+/* --- Columns flow RTL --- */
+[data-testid="stHorizontalBlock"] {
+    direction: rtl !important;
+}
+
+/* --- Sidebar RTL --- */
+[data-testid="stSidebar"] {
+    direction: rtl !important;
+}
+
+/* --- Download button --- */
+[data-testid="stDownloadButton"] button {
+    font-family: 'Heebo', sans-serif !important;
+    font-weight: 600 !important;
+    border-radius: var(--radius-sm) !important;
+}
+
+/* --- Fix Streamlit header bar --- */
+[data-testid="stHeader"] {
+    background-color: transparent !important;
+}
+
+/* --- Toast RTL --- */
+[data-testid="stToast"] {
+    direction: rtl !important;
+}
+
+/* ═══════════════════════════════════════════
+   Custom Result Card
+   ═══════════════════════════════════════════ */
+
+.result-card {
+    background: var(--color-card);
+    border-radius: var(--radius-lg);
+    padding: 24px 28px;
+    box-shadow: var(--shadow-md);
+    border: 1px solid var(--color-border);
+    direction: rtl;
+    margin: 12px 0;
+}
+
+.result-card h3 {
+    margin-top: 0;
+    color: var(--color-primary) !important;
+    border-bottom: 2px solid var(--color-accent-light);
+    padding-bottom: 10px;
+    margin-bottom: 14px;
+    font-size: 1.15rem !important;
+}
+
+.result-row {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 9px 0;
+    border-bottom: 1px solid var(--color-border-light);
+    font-size: 1rem;
+}
+
+.result-row:last-child {
+    border-bottom: none;
+}
+
+.result-label {
+    font-weight: 500;
+    color: var(--color-text-muted) !important;
+}
+
+.result-value {
+    font-weight: 700;
+    color: var(--color-text) !important;
+    direction: ltr;
+}
+
+.result-total {
+    background: var(--color-total-bg) !important;
+    border-radius: var(--radius-sm);
+    padding: 12px 18px !important;
+    margin-top: 10px;
+    font-size: 1.15rem;
+}
+
+.result-total .result-label,
+.result-total .result-value,
+.result-total span,
+.result-total div {
+    color: #FFFFFF !important;
+    font-weight: 700;
+}
+
+.exempt-badge {
+    display: inline-block;
+    background: var(--color-exempt-bg);
+    color: var(--color-exempt);
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.tax-badge {
+    display: inline-block;
+    background: var(--color-tax-bg);
+    color: var(--color-tax);
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-weight: 700;
+    font-size: 1rem;
+}
+
+.complex-tax-note {
+    background: var(--color-warning-bg);
+    border: 1px solid var(--color-warning);
+    border-radius: var(--radius-sm);
+    padding: 14px 18px;
+    direction: rtl;
+    text-align: right;
+    margin-top: 10px;
+    color: #9C6D32;
+    font-weight: 500;
+}
+
+/* --- Subtitle --- */
+.app-subtitle {
+    color: var(--color-text-muted);
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 20px;
+    line-height: 1.6;
+}
+
+.app-subtitle a {
+    color: var(--color-primary) !important;
+    text-decoration: underline;
+}
+
+/* --- Divider --- */
+hr {
+    border-color: var(--color-border-light) !important;
+    margin: 16px 0 !important;
+}
+
+/* ═══════════════════════════════════════════
+   Inline Calculator (below table)
+   ═══════════════════════════════════════════ */
+
+.inline-calc-box {
+    background: var(--color-card);
+    border: 1px solid var(--color-accent-light);
+    border-radius: var(--radius-md);
+    padding: 20px 24px;
+    margin-top: 16px;
+    direction: rtl;
+}
+
+.inline-calc-box h4 {
+    color: var(--color-primary) !important;
+    font-size: 1.1rem !important;
+    font-weight: 600;
+    margin-top: 0;
+    margin-bottom: 12px;
+}
+
+.selected-product-tag {
+    display: inline-block;
+    background: var(--color-accent-light);
+    color: var(--color-primary-dark);
+    padding: 4px 14px;
+    border-radius: 16px;
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-bottom: 8px;
+}
