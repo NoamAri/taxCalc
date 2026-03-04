@@ -344,7 +344,7 @@ with tab_calc:
                     display_val = f'{info["rate"]}%'
                 else:
                     display_val = val if val else "—"
-                tier_data.append({"מדרגה": t["label"], "שיעור מס": display_val})
+                tier_data.append({"שיעור מס": display_val, "מדרגה": t["label"]})
             st.table(pd.DataFrame(tier_data))
     else:
         st.markdown(

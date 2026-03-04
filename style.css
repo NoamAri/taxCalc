@@ -172,6 +172,22 @@ button[data-baseweb="tab"][aria-selected="true"] {
     text-align: right !important;
 }
 
+/* --- st.table RTL --- */
+[data-testid="stTable"] {
+    direction: rtl !important;
+}
+
+[data-testid="stTable"] table {
+    direction: rtl !important;
+    text-align: right !important;
+}
+
+[data-testid="stTable"] th,
+[data-testid="stTable"] td {
+    text-align: right !important;
+    font-family: 'Heebo', sans-serif !important;
+}
+
 /* --- Expander --- */
 [data-testid="stExpander"] {
     direction: rtl !important;
